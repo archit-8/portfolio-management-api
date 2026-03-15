@@ -1,60 +1,47 @@
-# Portfolio Management API
+# 📊 Portfolio Management API
 
-A backend application built using **Java and Spring Boot** that allows users to manage investment portfolios, track assets, and record transactions.
+A backend system built with **Java and Spring Boot** to manage investment portfolios, assets, and transactions.
 
-This project demonstrates **REST API design, layered architecture, and database interaction**, similar to systems used in financial platforms.
-
----
-
-## Tech Stack
-
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- Maven
-- MySQL
-- REST API
-- Docker (optional)
+This project demonstrates **REST API design, layered architecture, and database integration**, similar to financial backend systems.
 
 ---
 
-## System Architecture
+# 🚀 Tech Stack
 
-The application follows a **layered architecture**.
+| Technology | Purpose |
+|-----------|--------|
+| Java 17 | Backend language |
+| Spring Boot | Application framework |
+| Spring Data JPA | Database access |
+| Maven | Build tool |
+| MySQL | Database |
+| REST API | Communication |
+
+---
+
+# 🏗 System Architecture
+
+![Architecture Diagram](docs/images/architecture.png)
+
+Architecture Flow:
 
 Client → Controller → Service → Repository → Database
 
-### Layers
-
-**Controller Layer**
-- Handles HTTP requests
-- Exposes REST API endpoints
-
-**Service Layer**
-- Contains business logic
-- Processes portfolio operations
-
-**Repository Layer**
-- Communicates with database
-- Uses Spring Data JPA
-
-**Database**
-- Stores portfolio and transaction data
-
 ---
 
-## Request Flow
+# 🔄 Request Flow
 
-1. Client sends API request
+![API Flow](docs/images/flow.png)
+
+1. Client sends request
 2. Controller receives request
-3. Service layer processes business logic
+3. Service processes business logic
 4. Repository interacts with database
 5. Response returned to client
 
 ---
 
-## Project Structure
-
+# 📂 Project Structure
 
 ```
 portfolio-management-api
@@ -78,39 +65,37 @@ portfolio-management-api
 │   │   │               │   └── Portfolio.java
 │   │   │               │
 │   │   │               └── PortfolioApplication.java
-│   │   │
-│   │   └── resources
-│   │       └── application.properties
+│   │
+│   └── resources
+│       └── application.properties
 │
 └── pom.xml
 ```
 
-
-
 ---
 
-## Features
+# ⚙ Features
 
 - Create Portfolio
-- Add Assets to Portfolio
+- Add Assets
 - Record Transactions
 - Track Portfolio Performance
-- View Transaction History
+- Transaction History
 
 ---
 
-## API Endpoints
+# 🔌 API Endpoints
 
 | Method | Endpoint | Description |
 |------|------|------|
-| POST | /portfolio | Create new portfolio |
-| GET | /portfolio/{id} | Get portfolio details |
+| POST | /portfolio | Create portfolio |
+| GET | /portfolio/{id} | Get portfolio |
 | POST | /transaction | Add transaction |
-| GET | /transaction/history | Get transaction history |
+| GET | /transaction/history | View transactions |
 
 ---
 
-## Example API Request
+# 📦 Example API Request
 
 ### Create Portfolio
 
@@ -120,68 +105,79 @@ Request
 
 ```json
 {
-  "name": "Retirement Portfolio"
+ "name": "Retirement Portfolio"
 }
 ```
+
 Response
-```json
 
+```json
 {
-  "id": 1,
-  "name": "Retirement Portfolio"
+ "id": 1,
+ "name": "Retirement Portfolio"
 }
 ```
-Database Design
 
-Main tables used in the system
+---
 
-Portfolio
+# 🗄 Database Design
 
-Asset
+![Database ER Diagram](docs/images/database.png)
 
-Transaction
+Tables:
 
-Relationships
+- Portfolio
+- Asset
+- Transaction
 
-Portfolio → contains → Assets
-Portfolio → records → Transactions
+---
 
-How to Run the Project
+# ▶️ How to Run
 
-Clone the repository
-```json
+Clone repository
+
+```
 git clone https://github.com/yourusername/portfolio-management-api
 ```
-Move to project folder
-```json
+
+Go to project folder
+
+```
 cd portfolio-management-api
 ```
+
 Build project
-```json
+
+```
 mvn clean install
 ```
-Run Spring Boot application
-```json
+
+Run application
+
+```
 mvn spring-boot:run
 ```
-Server will start on
-```json
+
+Server starts on
+
+```
 http://localhost:8080
 ```
-Future Improvements
 
-Authentication using Spring Security
+---
 
-Portfolio analytics
+# 📈 Future Improvements
 
-Docker container deployment
+- Authentication using Spring Security
+- Swagger API documentation
+- Docker deployment
+- Portfolio analytics
 
-API documentation using Swagger
+---
 
-Author
+# 👨‍💻 Author
 
-Archit Singh
+**Archit Singh**
 
-Backend Developer
+Backend Developer  
 Java | Spring Boot | REST APIs
-
