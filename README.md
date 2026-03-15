@@ -31,7 +31,7 @@ Client → Controller → Service → Repository → Database
 
 # 🔄 Request Flow
 
-![API Flow](docs/images/flow.png)
+![API Flow](docs/images/request-flow.png)
 
 1. Client sends request
 2. Controller receives request
@@ -122,7 +122,7 @@ Response
 
 # 🗄 Database Design
 
-![Database ER Diagram](docs/images/database.png)
+![Database ER Diagram](docs/images/database-er.png)
 
 Tables:
 
